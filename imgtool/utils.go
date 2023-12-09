@@ -7,6 +7,15 @@ import (
 	"image/jpeg"
 ) 
 
+func Clamp(value, min, max float64) float64 {
+	if value < min {
+		return min
+	} else if value > max {
+		return max
+	}
+	return value
+}
+
 func ReadImgFromFile(imgPath string) image.Image {
 	reader, err := os.Open(imgPath)
 
