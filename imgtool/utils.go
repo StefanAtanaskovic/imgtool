@@ -46,3 +46,11 @@ func SaveImg(img image.Image, fileName string) {
 		log.Fatal("fail to save new image")
 	}
 }
+
+func ReadCmdArgs() string {
+    args := os.Args[1:]
+
+    input_file_path := args[0]
+
+    return input_file_path
+}

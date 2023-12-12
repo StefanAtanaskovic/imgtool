@@ -27,7 +27,8 @@ func createInverted(done chan string, img image.Image) {
 }
 
 func main() {
-	img := imagetool.ReadImgFromFile("big.jpg")
+    img_path := imagetool.ReadCmdArgs()
+	img := imagetool.ReadImgFromFile(img_path)
 
 	grayChan := make(chan string)
 	sepiaChan := make(chan string)
